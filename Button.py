@@ -1,13 +1,17 @@
+import pygame
+
 class Button:
-    def __init__(self, text, pos, font, bg="black"):
+    def __init__(self, text, pos, font, bg="black", feedback=""):
         self.x, self.y = pos
         self.font = pygame.font.Font(None, font)
-        self.bg = bg
-        self.text = text
+        if feedback == "":
+            self.feedback = "text"
+        else:
+            self.feedback = feedback
         self.change_text(text, bg)
 
     def change_text(self, text, bg="black"):
-        """Change the text"""
+        """Change the text when you click"""
         self.text = self.font.render(text, True, pygame.Color("white"))
         self.size = self.text.get_size()
         self.surface = pygame.Surface(self.size)
@@ -21,5 +25,6 @@ class Button:
     def click(self, event):
         x, y = pygame.mouse.get_pos()
         if self.rect.collidepoint(x, y):
+            self.change_text(self.feedback, bg="red")
             return True
         return False
