@@ -1,0 +1,38 @@
+[
+  {
+    "id": "golden_hour",
+    "name": "Golden Hour",
+    "description": "Production x7!",
+    "kind": "production_mult",
+    "multiplier": 7,
+    "duration": 30,
+    "weight": 2
+  },
+  {
+    "id": "power_surge",
+    "name": "Power Surge",
+    "description": "Production x3.",
+    "kind": "production_mult",
+    "multiplier": 3,
+    "duration": 60,
+    "weight": 4
+  },
+  {
+    "id": "click_frenzy",
+    "name": "Click Frenzy",
+    "description": "Clicks x10!",
+    "kind": "click_mult",
+    "multiplier": 10,
+    "duration": 20,
+    "weight": 3
+  },
+  {
+    "id": "caffeine",
+    "name": "Caffeine Rush",
+    "description": "Clicks x4.",
+    "kind": "click_mult",
+    "multiplier": 4,
+    "duration": 45,
+    "weight": 4
+  }
+]

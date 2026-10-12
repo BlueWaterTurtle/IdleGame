@@ -1,0 +1,10 @@
+{
+  "autosave_interval": 30,
+  "offline_cap_hours": 8,
+  "offline_efficiency": 0.5,
+  "prestige_base": 10000000,
+  "prestige_bonus_per_point": 0.1,
+  "min_prestige_points": 1,
+  "event_min_interval": 45,
+  "event_max_interval": 120
+}

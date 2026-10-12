@@ -1,0 +1,271 @@
+[
+  {
+    "id": "click_power",
+    "name": "Click Power",
+    "description": "+1 resource per click. Cost doubles each purchase.",
+    "category": "click",
+    "cost": 10,
+    "cost_multiplier": 2.0,
+    "max_level": 0,
+    "effect_type": "click_add",
+    "value": 1
+  },
+  {
+    "id": "iron_finger",
+    "name": "Iron Finger",
+    "description": "Clicks are twice as strong.",
+    "category": "click",
+    "cost": 500,
+    "effect_type": "click_mult",
+    "value": 2,
+    "unlock": {
+      "type": "clicks",
+      "value": 50
+    }
+  },
+  {
+    "id": "diamond_finger",
+    "name": "Diamond Finger",
+    "description": "Clicks are twice as strong again.",
+    "category": "click",
+    "cost": 50000,
+    "effect_type": "click_mult",
+    "value": 2,
+    "unlock": {
+      "type": "total_earned",
+      "value": 10000
+    }
+  },
+  {
+    "id": "autoclicker_1",
+    "name": "Twin Cursors",
+    "description": "Auto-Clicker production x2.",
+    "category": "generator",
+    "cost": 150,
+    "effect_type": "generator_mult",
+    "target": "autoclicker",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "autoclicker",
+      "value": 5
+    }
+  },
+  {
+    "id": "autoclicker_2",
+    "name": "Quad Cursors",
+    "description": "Auto-Clicker production x2.",
+    "category": "generator",
+    "cost": 1500,
+    "effect_type": "generator_mult",
+    "target": "autoclicker",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "autoclicker",
+      "value": 25
+    }
+  },
+  {
+    "id": "farm_1",
+    "name": "Fertilizer",
+    "description": "Farm production x2.",
+    "category": "generator",
+    "cost": 1000,
+    "effect_type": "generator_mult",
+    "target": "farm",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "farm",
+      "value": 5
+    }
+  },
+  {
+    "id": "farm_2",
+    "name": "Irrigation",
+    "description": "Farm production x2.",
+    "category": "generator",
+    "cost": 10000,
+    "effect_type": "generator_mult",
+    "target": "farm",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "farm",
+      "value": 25
+    }
+  },
+  {
+    "id": "mine_1",
+    "name": "Steel Picks",
+    "description": "Mine production x2.",
+    "category": "generator",
+    "cost": 11000,
+    "effect_type": "generator_mult",
+    "target": "mine",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "mine",
+      "value": 5
+    }
+  },
+  {
+    "id": "mine_2",
+    "name": "Drill Rigs",
+    "description": "Mine production x2.",
+    "category": "generator",
+    "cost": 110000,
+    "effect_type": "generator_mult",
+    "target": "mine",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "mine",
+      "value": 25
+    }
+  },
+  {
+    "id": "factory_1",
+    "name": "Assembly Lines",
+    "description": "Factory production x2.",
+    "category": "generator",
+    "cost": 120000,
+    "effect_type": "generator_mult",
+    "target": "factory",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "factory",
+      "value": 5
+    }
+  },
+  {
+    "id": "factory_2",
+    "name": "Robotics",
+    "description": "Factory production x2.",
+    "category": "generator",
+    "cost": 1200000,
+    "effect_type": "generator_mult",
+    "target": "factory",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "factory",
+      "value": 25
+    }
+  },
+  {
+    "id": "lab_1",
+    "name": "Better Beakers",
+    "description": "Lab production x2.",
+    "category": "generator",
+    "cost": 1300000,
+    "effect_type": "generator_mult",
+    "target": "lab",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "lab",
+      "value": 5
+    }
+  },
+  {
+    "id": "lab_2",
+    "name": "Quantum Computers",
+    "description": "Lab production x2.",
+    "category": "generator",
+    "cost": 13000000,
+    "effect_type": "generator_mult",
+    "target": "lab",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "lab",
+      "value": 25
+    }
+  },
+  {
+    "id": "portal_1",
+    "name": "Stable Rift",
+    "description": "Portal production x2.",
+    "category": "generator",
+    "cost": 14000000,
+    "effect_type": "generator_mult",
+    "target": "portal",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "portal",
+      "value": 5
+    }
+  },
+  {
+    "id": "portal_2",
+    "name": "Dimensional Anchor",
+    "description": "Portal production x2.",
+    "category": "generator",
+    "cost": 140000000,
+    "effect_type": "generator_mult",
+    "target": "portal",
+    "value": 2,
+    "unlock": {
+      "type": "generator_owned",
+      "target": "portal",
+      "value": 25
+    }
+  },
+  {
+    "id": "eff_1",
+    "name": "Efficiency I",
+    "description": "All production x1.25.",
+    "category": "global",
+    "cost": 1000,
+    "effect_type": "global_mult",
+    "value": 1.25,
+    "unlock": {
+      "type": "total_earned",
+      "value": 500
+    }
+  },
+  {
+    "id": "eff_2",
+    "name": "Efficiency II",
+    "description": "All production x1.5.",
+    "category": "global",
+    "cost": 50000,
+    "effect_type": "global_mult",
+    "value": 1.5,
+    "unlock": {
+      "type": "total_earned",
+      "value": 25000
+    }
+  },
+  {
+    "id": "eff_3",
+    "name": "Efficiency III",
+    "description": "All production x2.",
+    "category": "global",
+    "cost": 2500000,
+    "effect_type": "global_mult",
+    "value": 2,
+    "unlock": {
+      "type": "total_earned",
+      "value": 1000000
+    }
+  },
+  {
+    "id": "synergy",
+    "name": "Rebirth Synergy",
+    "description": "All production x1.5. Requires a prestige.",
+    "category": "global",
+    "cost": 50000000,
+    "effect_type": "global_mult",
+    "value": 1.5,
+    "unlock": {
+      "type": "prestige",
+      "value": 1
+    }
+  }
+]
