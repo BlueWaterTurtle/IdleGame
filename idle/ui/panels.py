@@ -16,6 +16,10 @@ from .formatting import format_time
 Pos = Tuple[int, int]
 
 
+def _ellipsize(text: str, limit: int) -> str:
+    return text if len(text) <= limit else text[:limit - 3].rstrip() + "..."
+
+
 def draw_frame(screen: pygame.Surface, rect: pygame.Rect, title: str = "") -> None:
     """Panel background, border and title."""
     pygame.draw.rect(screen, theme.PANEL, rect, border_radius=8)
@@ -190,7 +194,7 @@ class ShopPanel(ScrollList):
         self.end(screen)
 
     def click(self, pos: Pos, state: GameState, event: Any) -> Optional[Tuple[str, Any]]:
-        """Handle a left click. Returns ('buy', qty) / None."""
+        """Handle a left click. Returns ('buy', qty), ('mode', m) or None."""
         for m, b in self.mode_buttons:
             if b.click(event):
                 self.mode = m
@@ -212,7 +216,10 @@ class ShopPanel(ScrollList):
             return []
         g = self.visible(state)[i]
         if not generators.is_unlocked(state, g):
-            return ["Locked", f"Earn {fmt(g.unlock_total)} total resources"]
+            need = ["Locked", f"Earn {fmt(g.unlock_total)} total resources"]
+            if g.unlock_prestige:
+                need.append(f"Prestige {g.unlock_prestige} time(s)")
+            return need
         mult = upgrades.generator_multiplier(state, g.id)
         return [g.name, g.description, f"Owned: {state.owned(g.id)}",
                 f"Producing: {fmt(generators.production_of(state, g) * upgrades.global_multiplier(state) * state.permanent_multiplier)}/s",
@@ -251,7 +258,7 @@ class UpgradePanel(ScrollList):
             lv = upgrades.level(state, u.id)
             name = u.name + (f"  Lv {lv}" if u.max_level != 1 else "")
             screen.blit(theme.font(24).render(name, True, theme.TEXT), (r.x + 52, r.y + 5))
-            screen.blit(theme.font(19).render(u.description[:40], True, theme.TEXT_DIM), (r.x + 52, r.y + 24))
+            screen.blit(theme.font(19).render(_ellipsize(u.description, 40), True, theme.TEXT_DIM), (r.x + 52, r.y + 24))
             screen.blit(theme.font(22).render(fmt(c), True, theme.GOOD if ok else theme.BAD), (r.x + 52, r.y + 40))
         if not items:
             screen.blit(theme.font(22).render("No upgrades available yet.", True, theme.TEXT_DIM),
@@ -323,7 +330,7 @@ class InfoPanel(ScrollList):
                 screen.blit(theme.font(18).render(row.description, True, theme.TEXT_DIM), (r.x + 46, r.y + 22))
             elif self.tab == 1:
                 t, text = row
-                screen.blit(theme.font(20).render(f"[{format_time(t)}] {text}"[:48], True, theme.TEXT), (r.x + 4, r.y + 4))
+                screen.blit(theme.font(20).render(_ellipsize(f"[{format_time(t)}] {text}", 48), True, theme.TEXT), (r.x + 4, r.y + 4))
             else:
                 screen.blit(theme.font(22).render(row[0], True, theme.TEXT_DIM), (r.x + 8, r.y + 4))
                 v = theme.font(22).render(row[1], True, theme.TEXT)

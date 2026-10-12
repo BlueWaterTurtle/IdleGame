@@ -2,7 +2,7 @@
   {
     "id": "clicks_1",
     "name": "First Click",
-    "description": "Click 1 times.",
+    "description": "Click 1 time.",
     "condition": {
       "stat": "total_clicks",
       "value": 1
@@ -79,7 +79,7 @@
   {
     "id": "gens_1",
     "name": "Hired Help",
-    "description": "Own 1 generators at once.",
+    "description": "Own 1 generator at once.",
     "condition": {
       "stat": "generators_owned",
       "value": 1
