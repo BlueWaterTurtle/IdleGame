@@ -1,0 +1,62 @@
+[
+  {
+    "id": "autoclicker",
+    "name": "Auto-Clicker",
+    "description": "A tireless cursor that clicks for you.",
+    "base_cost": 15,
+    "cost_multiplier": 1.15,
+    "base_production": 0.1,
+    "unlock_total": 0,
+    "icon": "cursor"
+  },
+  {
+    "id": "farm",
+    "name": "Farm",
+    "description": "Grows resources from fertile soil.",
+    "base_cost": 100,
+    "cost_multiplier": 1.15,
+    "base_production": 1,
+    "unlock_total": 50,
+    "icon": "farm"
+  },
+  {
+    "id": "mine",
+    "name": "Mine",
+    "description": "Digs up raw resources.",
+    "base_cost": 1100,
+    "cost_multiplier": 1.15,
+    "base_production": 8,
+    "unlock_total": 500,
+    "icon": "mine"
+  },
+  {
+    "id": "factory",
+    "name": "Factory",
+    "description": "Mass-produces resources.",
+    "base_cost": 12000,
+    "cost_multiplier": 1.15,
+    "base_production": 47,
+    "unlock_total": 5000,
+    "icon": "factory"
+  },
+  {
+    "id": "lab",
+    "name": "Lab",
+    "description": "Research turns into resources.",
+    "base_cost": 130000,
+    "cost_multiplier": 1.15,
+    "base_production": 260,
+    "unlock_total": 50000,
+    "icon": "lab"
+  },
+  {
+    "id": "portal",
+    "name": "Portal",
+    "description": "Pulls resources from another dimension.",
+    "base_cost": 1400000,
+    "cost_multiplier": 1.15,
+    "base_production": 1400,
+    "unlock_total": 500000,
+    "icon": "portal"
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": "clicks_1",
+    "name": "First Click",
+    "description": "Click 1 times.",
+    "condition": {
+      "stat": "total_clicks",
+      "value": 1
+    },
+    "reward_bonus": 0.01,
+    "icon": "click"
+  },
+  {
+    "id": "clicks_100",
+    "name": "Clicker",
+    "description": "Click 100 times.",
+    "condition": {
+      "stat": "total_clicks",
+      "value": 100
+    },
+    "reward_bonus": 0.01,
+    "icon": "click"
+  },
+  {
+    "id": "clicks_1000",
+    "name": "Click Addict",
+    "description": "Click 1,000 times.",
+    "condition": {
+      "stat": "total_clicks",
+      "value": 1000
+    },
+    "reward_bonus": 0.01,
+    "icon": "click"
+  },
+  {
+    "id": "clicks_10000",
+    "name": "Finger Cramp",
+    "description": "Click 10,000 times.",
+    "condition": {
+      "stat": "total_clicks",
+      "value": 10000
+    },
+    "reward_bonus": 0.01,
+    "icon": "click"
+  },
+  {
+    "id": "earned_1K",
+    "name": "Pocket Change",
+    "description": "Earn 1K resources in total.",
+    "condition": {
+      "stat": "total_earned",
+      "value": 1000
+    },
+    "reward_bonus": 0.01,
+    "icon": "coin"
+  },
+  {
+    "id": "earned_1M",
+    "name": "Millionaire",
+    "description": "Earn 1M resources in total.",
+    "condition": {
+      "stat": "total_earned",
+      "value": 1000000.0
+    },
+    "reward_bonus": 0.01,
+    "icon": "coin"
+  },
+  {
+    "id": "earned_1B",
+    "name": "Billionaire",
+    "description": "Earn 1B resources in total.",
+    "condition": {
+      "stat": "total_earned",
+      "value": 1000000000.0
+    },
+    "reward_bonus": 0.01,
+    "icon": "coin"
+  },
+  {
+    "id": "gens_1",
+    "name": "Hired Help",
+    "description": "Own 1 generators at once.",
+    "condition": {
+      "stat": "generators_owned",
+      "value": 1
+    },
+    "reward_bonus": 0.01,
+    "icon": "gear"
+  },
+  {
+    "id": "gens_50",
+    "name": "Small Business",
+    "description": "Own 50 generators at once.",
+    "condition": {
+      "stat": "generators_owned",
+      "value": 50
+    },
+    "reward_bonus": 0.01,
+    "icon": "gear"
+  },
+  {
+    "id": "gens_200",
+    "name": "Industrialist",
+    "description": "Own 200 generators at once.",
+    "condition": {
+      "stat": "generators_owned",
+      "value": 200
+    },
+    "reward_bonus": 0.01,
+    "icon": "gear"
+  },
+  {
+    "id": "prestige_1",
+    "name": "Reborn",
+    "description": "Prestige 1 time(s).",
+    "condition": {
+      "stat": "prestiges",
+      "value": 1
+    },
+    "reward_bonus": 0.01,
+    "icon": "star"
+  },
+  {
+    "id": "prestige_5",
+    "name": "Cycle of Life",
+    "description": "Prestige 5 time(s).",
+    "condition": {
+      "stat": "prestiges",
+      "value": 5
+    },
+    "reward_bonus": 0.01,
+    "icon": "star"
+  },
+  {
+    "id": "time_600",
+    "name": "Getting Comfy",
+    "description": "Play for 10 minutes.",
+    "condition": {
+      "stat": "play_time",
+      "value": 600
+    },
+    "reward_bonus": 0.01,
+    "icon": "clock"
+  },
+  {
+    "id": "time_3600",
+    "name": "Dedicated",
+    "description": "Play for 1 hour.",
+    "condition": {
+      "stat": "play_time",
+      "value": 3600
+    },
+    "reward_bonus": 0.01,
+    "icon": "clock"
+  },
+  {
+    "id": "upgrades_5",
+    "name": "Shopper",
+    "description": "Own 5 upgrade levels.",
+    "condition": {
+      "stat": "upgrades_bought",
+      "value": 5
+    },
+    "reward_bonus": 0.01,
+    "icon": "upgrade"
+  },
+  {
+    "id": "upgrades_15",
+    "name": "Upgrade Junkie",
+    "description": "Own 15 upgrade levels.",
+    "condition": {
+      "stat": "upgrades_bought",
+      "value": 15
+    },
+    "reward_bonus": 0.01,
+    "icon": "upgrade"
+  },
+  {
+    "id": "events_1",
+    "name": "Lucky Day",
+    "description": "Trigger 1 random event(s).",
+    "condition": {
+      "stat": "events_triggered",
+      "value": 1
+    },
+    "reward_bonus": 0.01,
+    "icon": "bolt"
+  },
+  {
+    "id": "events_10",
+    "name": "Fortune's Favorite",
+    "description": "Trigger 10 random event(s).",
+    "condition": {
+      "stat": "events_triggered",
+      "value": 10
+    },
+    "reward_bonus": 0.01,
+    "icon": "bolt"
+  }
+]

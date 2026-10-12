@@ -1,0 +1,6 @@
+savegame.json
+savegame.json.tmp
+savegame.json.corrupt
+__pycache__/
+*.pyc
+.pytest_cache/
