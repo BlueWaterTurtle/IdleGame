@@ -112,12 +112,19 @@ def _bolt(s, k, c):
 
 
 def _target(s, k, c):
-    pygame.draw.circle(s, (20, 40, 90), (k(50), k(50)), k(48))
-    for r, f in ((46, 0.55), (36, 0.8), (24, 1.0)):
-        col = tuple(min(255, int(v * f)) for v in c)
-        pygame.draw.circle(s, col, (k(50), k(50)), k(r))
-    pygame.draw.circle(s, (210, 235, 255), (k(40), k(38)), k(8))
-    pygame.draw.circle(s, (255, 255, 255), (k(50), k(50)), k(48), max(2, k(3)))
+    center = (k(50), k(50))
+    pygame.draw.circle(s, (37, 31, 94), center, k(48))
+    for r, color in ((46, (65, 207, 255)), (38, (132, 111, 255)),
+                     (29, (255, 120, 190)), (20, (255, 218, 91)), (12, (255, 248, 220))):
+        pygame.draw.circle(s, color, center, k(r))
+    eye_color = (53, 42, 105)
+    for x in (44, 56):
+        pygame.draw.circle(s, eye_color, (k(x), k(49)), max(1, k(2)))
+    pygame.draw.arc(s, eye_color, (k(44), k(48), k(12), k(10)), math.pi * 0.12, math.pi * 0.88,
+                    max(1, k(2)))
+    pygame.draw.ellipse(s, (255, 255, 255), (k(28), k(23), k(13), k(7)))
+    pygame.draw.circle(s, (255, 255, 255), (k(70), k(67)), max(1, k(3)))
+    pygame.draw.circle(s, (255, 255, 255), center, k(48), max(2, k(3)))
 
 
 def _lock(s, k, c):

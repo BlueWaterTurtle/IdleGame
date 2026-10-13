@@ -24,6 +24,7 @@ def draw_frame(screen: pygame.Surface, rect: pygame.Rect, title: str = "") -> No
     """Panel background, border and title."""
     pygame.draw.rect(screen, theme.PANEL, rect, border_radius=8)
     pygame.draw.rect(screen, theme.BORDER, rect, 1, border_radius=8)
+    pygame.draw.line(screen, theme.ACCENT, (rect.x + 10, rect.y + 2), (rect.right - 10, rect.y + 2), 2)
     if title:
         screen.blit(theme.font(26).render(title, True, theme.TEXT), (rect.x + 12, rect.y + 8))
 

@@ -7,21 +7,21 @@ import pygame
 
 Color = Tuple[int, int, int]
 
-BG: Color = (18, 21, 32)
-PANEL: Color = (30, 35, 52)
-PANEL_ALT: Color = (38, 44, 64)
-BORDER: Color = (62, 72, 100)
-TEXT: Color = (232, 236, 245)
-TEXT_DIM: Color = (150, 158, 180)
-ACCENT: Color = (80, 160, 255)
-GOOD: Color = (96, 214, 134)
-BAD: Color = (232, 96, 96)
-GOLD: Color = (255, 205, 80)
-BUTTON: Color = (52, 96, 170)
-BUTTON_GREEN: Color = (40, 140, 90)
-BUTTON_RED: Color = (160, 60, 60)
-BUTTON_PURPLE: Color = (120, 70, 170)
-DISABLED: Color = (60, 64, 78)
+BG: Color = (19, 18, 42)
+PANEL: Color = (35, 31, 72)
+PANEL_ALT: Color = (47, 43, 91)
+BORDER: Color = (83, 75, 139)
+TEXT: Color = (248, 245, 255)
+TEXT_DIM: Color = (182, 176, 215)
+ACCENT: Color = (76, 215, 255)
+GOOD: Color = (105, 240, 164)
+BAD: Color = (255, 111, 140)
+GOLD: Color = (255, 218, 91)
+BUTTON: Color = (76, 102, 211)
+BUTTON_GREEN: Color = (39, 161, 127)
+BUTTON_RED: Color = (204, 72, 112)
+BUTTON_PURPLE: Color = (153, 86, 215)
+DISABLED: Color = (67, 62, 96)
 
 _fonts: Dict[int, pygame.font.Font] = {}
 
