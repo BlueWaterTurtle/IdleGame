@@ -1,6 +1,7 @@
 """Pygame front-end: window, event handling, main loop."""
 from __future__ import annotations
 
+import math
 import sys
 from typing import List, Optional, Tuple
 
@@ -191,6 +192,17 @@ class Game:
         size = 190 if hover else 180
         img = sprites.get("click", "target", size, "target")
         screen.blit(img, img.get_rect(center=self.target_center))
+        pulse = (math.sin(st.play_time * 3.2) + 1) / 2
+        glow = pygame.Surface((220, 220), pygame.SRCALPHA)
+        glow_center = (110, 110)
+        pygame.draw.circle(glow, (*theme.ACCENT, 45), glow_center, 96 + int(pulse * 5), 5)
+        pygame.draw.circle(glow, (*theme.GOLD, 36), glow_center, 105 + int(pulse * 6), 2)
+        screen.blit(glow, (self.target_center[0] - 110, self.target_center[1] - 110))
+        for i, color in enumerate((theme.GOLD, theme.ACCENT, (255, 125, 196))):
+            angle = st.play_time * 0.8 + i * math.tau / 3
+            sparkle = (int(self.target_center[0] + math.cos(angle) * 103),
+                       int(self.target_center[1] + math.sin(angle) * 103))
+            pygame.draw.circle(screen, color, sparkle, 3 + (i == 0))
         label = theme.font(28).render(f"+{fmt(st.click_value())} per click", True, theme.TEXT)
         screen.blit(label, label.get_rect(center=(self.target_center[0], self.target_center[1] + 118)))
         self.btn_prestige.change_text(f"Prestige +{prestige.pending_points(st)}")
